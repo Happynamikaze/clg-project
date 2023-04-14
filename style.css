@@ -6,7 +6,7 @@
 	--theme-blue-light : #b4c5e4;
 	--theme-browm : #3c3744;
 	--theme-skyblue : #3066be;
-	--theme-lskyblue : #60a0ff;
+	--theme-lskyblue : #c7ffd5;
 	--font-cour : 'Courgette', cursive;
 	--font-itim :'Itim', cursive;
 	--font-mono: 'Montserrat', sans-serif;
@@ -25,18 +25,19 @@ body{
 	font-family: var(--font-mono);
 }
 header{
-	padding: 0.5em;
 	position: fixed;
     width: 100%;
     z-index: 9;
     backdrop-filter: blur(40px) ;	
+    background-color: rgba(0, 0, 0, 0.319);
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    background-color: rgba(0,0,0,0.2);
 }
 .logo_size {
     width: 1.75rem;
 }
 .nav-top{
+	padding: 0.5rem 0;
+
 	width: 64rem;
 	margin: auto;
 	display: flex;
@@ -49,6 +50,7 @@ header{
 }
 .nav-name ol a{
 	text-decoration: none;
+	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: 0.06em;
 	
@@ -57,17 +59,64 @@ header{
 	color: var(--theme-pwhite) !important;
 	
 }
+.active{
+	color: var(--theme-lskyblue) !important;
+	
+}
 .nav-name ol a:hover{
 	text-decoration: none;
 	color: var(--theme-blue-light) !important;
 }
-.active{
-	color: var(--theme-lskyblue) !important;
-;
-	
+.left-side{
+	flex: 0 0 50%;
+}
+.right-side{
+	flex: 0 0 50%;
 }
 
 nav ul {
 	margin: 0px !important;
 	
 }
+
+.path {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+  }
+  
+  
+  .mouse {
+	width: 25px;
+	height: 42px;
+	border: 3px solid #333;
+	border-radius: 60px;
+	position: relative;
+  }
+  .mouse::before {
+	content: "";
+	width: 7px;
+	height: 9px;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #333;
+	border-radius: 50%;
+	opacity: 1;
+	animation: wheel 2s infinite;
+	-webkit-animation: wheel 2s infinite;
+  }
+  
+  @keyframes wheel {
+	to {
+	  opacity: 0;
+	  top: 20px;
+	}
+  }
+  @-webkit-keyframes wheel {
+	to {
+	  opacity: 0;
+	  top: 25px;
+	}
+  }
