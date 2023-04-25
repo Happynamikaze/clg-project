@@ -8,7 +8,6 @@
 	--theme-skyblue : #3066be;
 	--theme-lskyblue : #50f77ac3;
 	--theme-blue-dark :#3066be;
-
 	--theme-lskybluedim : #50f77a80;
 	--dark: #222831;
     --lightdark: #393E46;
@@ -26,7 +25,6 @@
     box-sizing: border-box;
     transition: all 0.3s ease;
 }
-
 body{
 	background-color: var(--theme-white) !important;
 	font-family: var(--font-mono) !important;
